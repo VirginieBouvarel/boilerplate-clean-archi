@@ -1,0 +1,1 @@
+`yarn init -2` -> pour initialiser le projet en mode plug and play sans avoir besoin du dossier node_modules pour les dépendances
