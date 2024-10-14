@@ -6,6 +6,9 @@
 `yarn add express dotenv body-parser`
 -> dotenv pour charger le fichier .env et les variables d'environnement
 -> body-parser pour interpéter le body json d'une réponse http
+`yarn add tsoa reflect-metadata`
+-> tsoa fournit une bibliothèque de décorateurs pour les controllers, elle est "compliant open api"
+-> reflect-metadata est un polyfill qui permet d'exploiter les décorateurs lors de l'exécution
 
 ### dev-dependencies
 `yarn add -D @types/express @types/body-parser`
