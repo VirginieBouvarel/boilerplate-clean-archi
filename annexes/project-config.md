@@ -9,6 +9,8 @@
 `yarn add tsoa reflect-metadata`
 -> tsoa fournit une bibliothèque de décorateurs pour les controllers, elle est "compliant open api"
 -> reflect-metadata est un polyfill qui permet d'exploiter les décorateurs lors de l'exécution
+`yarn add zod`
+-> zod fournit des utilitaires de validation de données
 
 ### dev-dependencies
 `yarn add -D @types/express @types/body-parser`

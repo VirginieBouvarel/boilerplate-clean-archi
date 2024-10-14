@@ -1,4 +1,5 @@
-import { Controller, Delete, Get, Post, Route, SuccessResponse } from "tsoa";
+import { Body, Controller, Delete, Get, Post, Route, SuccessResponse } from "tsoa";
+import { GetBookOutputDto, GetBooksOutputDto, PostBookInputDto, PostBookOutputDto } from "./dto";
 
 @Route('books')
 export class BookController extends Controller {
@@ -8,20 +9,32 @@ export class BookController extends Controller {
 
   @Get()
   @SuccessResponse(200)
-  async list(): Promise<unknown> {
+  async list(): Promise<GetBooksOutputDto> {
     return [];
   }
 
   @Get('{id}')
   @SuccessResponse(200)
-  async getById(): Promise<unknown> {
-    return;
+  async getById(): Promise<GetBookOutputDto> {
+    return {
+      id: 'mock id',
+      title: 'mock title',
+      summary: 'mock summary',
+      author: 'mock author',
+      totalPages: 100,
+    };
   }
 
   @Post()
   @SuccessResponse(201)
-  async create(): Promise<unknown> {
-    return;
+  async create(@Body() requestBody: PostBookInputDto): Promise<PostBookOutputDto> {
+    return {
+      id: 'mock id',
+      title: 'mock title',
+      summary: 'mock summary',
+      author: 'mock author',
+      totalPages: 100,
+    };
   }
 
   @Delete('{id}')
